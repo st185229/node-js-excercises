@@ -1,0 +1,15 @@
+{
+  "name": "src2",
+  "version": "1.0.0",
+  "description": "a test module",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --config prettierrc \"*.js\" --write"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
