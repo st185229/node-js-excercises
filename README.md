@@ -1,4 +1,5 @@
 # node-js-excercises
 
-npm run prettier
-npm run lint
+## cd src3
+- npm run prettier
+- npm run lint
