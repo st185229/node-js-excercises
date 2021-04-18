@@ -1,0 +1,17 @@
+{
+  "name": "src3-ts",
+  "version": "1.0.0",
+  "description": "- create src folder and move js file to ts file and rename to .ts\r - npm init -y\r - npm i --save-dev typescript\r - npm i --save-dev ts-node\r - npm i --save-dev @types/node\r - npx tsc --init\r - replace the script in file package.json",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.14.41",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}
