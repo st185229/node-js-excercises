@@ -46,6 +46,7 @@ This gist provide quick overview of how to migrate a Node JS project from JS to 
 ```
 
 - Go to tsconfig.json
+
 ```
 --
 "target": "es5",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
@@ -68,4 +69,5 @@ This gist provide quick overview of how to migrate a Node JS project from JS to 
 },
 "exclude": ["node_modules"],
 ```
+
 - npm run build
