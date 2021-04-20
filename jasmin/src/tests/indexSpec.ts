@@ -1,4 +1,8 @@
-import myFunc from "../index";
+import {myFunc, getCountry,getRegionCountries, getRegionCapitals} from "../index";
+import countries from "../index";
+import app from "../index";
+import supertest from "supertest";
+
 import strings from "../utilities/strings";
 import numbers from "../utilities/numbers";
 import arrays from "../utilities/arrays"
@@ -33,6 +37,49 @@ describe("First Suite", () => {
         expect(arrays.lgNum(wordArr)).toBeFalsy();
     })
 
+    var originalTimeout:number;
+
+    beforeEach(function() {
+        originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
+        jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000;
+    });
+
+    it("should get basic data on the country canada", async () => {
+        const data = await countries.getCountry('canada');
+        expect(data).toEqual({
+            capital: 'Ottawa',
+            region: 'Americas',
+            numericCode: '124'
+        });
+    });
+
+    /** Add test for getRegionCountries function here */
+    it('Should get the countries in the region NAFTA', async () =>{
+        const data = await  countries.getRegionCountries('nafta');
+        expect(data).toEqual(['Canada','Mexico', 'United States of America']);
+    });
+
+
+    it("should get capitals of NAFTA countries", async () => {
+        const data = await countries.getRegionCapitals('nafta');
+        expect(data).toEqual([
+            'Ottawa', 'Mexico City', 'Washington, D.C.'
+        ]);
+    });
+
+    afterEach(function() {
+        jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
+    });
+
+    const request = supertest(app);
+
+    describe('Test endpoint response', () => {
+        it('gets the api endpoint', async(done) =>{
+            const response = await request.get('/api');
+            expect(response.status).toBe(200);
+            done();
+        });
+    });
 
 
 
