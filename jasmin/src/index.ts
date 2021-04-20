@@ -6,8 +6,6 @@ const myFunc = (num: number) => num * 5;
 
 export default myFunc;
 
-
-
 const numArr = [3, 4, 5, 6];
 const wordArr = ['cat', 'dog', 'rabbit', 'bird'];
 const arrSum = arrays.addArr(numArr);
