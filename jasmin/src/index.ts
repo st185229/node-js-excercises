@@ -4,8 +4,6 @@ import strings from './utilities/strings.js';
 
 export const myFunc = (num: number) => num * 5;
 
-
-
 const numArr = [3, 4, 5, 6];
 const wordArr = ['cat', 'dog', 'rabbit', 'bird'];
 const arrSum = arrays.addArr(numArr);
@@ -76,7 +74,7 @@ export async function getRegionCapitals(regionalbloc: string = 'nafta') {
 }
 
 import express from 'express';
-export const app = express();
+export const  app = express();
 const port = 5000
 
 
@@ -91,8 +89,7 @@ export default {
     getCountry,
     getRegionCountries,
     getRegionCapitals,
-    app
 };
 
-//Comment the below and remove  fdescribe for running other tests
+
 
