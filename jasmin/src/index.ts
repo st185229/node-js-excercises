@@ -76,8 +76,9 @@ export async function getRegionCapitals(regionalbloc: string = 'nafta') {
 }
 
 import express from 'express';
-const app = express();
+export const app = express();
 const port = 5000
+
 
 app.get('/api', (req, res) =>{
     res.send('Hello world');
@@ -92,3 +93,6 @@ export default {
     getRegionCapitals,
     app
 };
+
+//Comment the below and remove  fdescribe for running other tests
+
