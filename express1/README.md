@@ -11,3 +11,13 @@
 - npm i --save-dev nodemon
 ## run
 - npm run start
+
+## Create a build
+
+- npm run build
+
+## Run the binary module
+- Go to tsconfig.json
+"outDir": "./build"
+
+node build/.
